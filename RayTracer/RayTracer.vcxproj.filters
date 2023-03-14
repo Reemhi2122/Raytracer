@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Geometry">
+      <UniqueIdentifier>{0498eeb9-b4a8-47dc-93dd-9182f239cbd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Geometry\Plane">
+      <UniqueIdentifier>{188b5792-6c20-47f8-b5b9-b0aa42b838d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Geometry\Base">
+      <UniqueIdentifier>{48202139-eacb-478b-b3b8-4346dae1a521}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Geometry\Sphere">
+      <UniqueIdentifier>{a5853b46-7ae9-49ac-b04a-39589c547a69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Light">
+      <UniqueIdentifier>{020d45ba-5549-463f-a4e1-ee862ac53502}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Light\Base">
+      <UniqueIdentifier>{573b5f17-57e8-4eff-b30b-4f948a5bdaa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Light\PointLight">
+      <UniqueIdentifier>{0a2d8e7c-f50d-412e-b217-6d59431a02ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Geometry\Quad">
+      <UniqueIdentifier>{a9c2c9c5-5fde-4ffb-91cc-47d568969647}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Geometry\Box">
+      <UniqueIdentifier>{f752f570-71bb-4633-818f-cae276bfd13c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Light\AreaLight">
+      <UniqueIdentifier>{f5bf0019-1fa0-451a-a837-0e73ba182f26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Geometry\Triangle">
+      <UniqueIdentifier>{d83859a2-72e6-493d-9176-e400b63e70fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{96e07cb0-1fb6-48a6-bac4-b48b6e8d1aab}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RayTracer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Plane.cpp">
+      <Filter>Geometry\Plane</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape.cpp">
+      <Filter>Geometry\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Sphere.cpp">
+      <Filter>Geometry\Sphere</Filter>
+    </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>Light\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="PointLight.cpp">
+      <Filter>Light\PointLight</Filter>
+    </ClCompile>
+    <ClCompile Include="Quad.cpp">
+      <Filter>Geometry\Quad</Filter>
+    </ClCompile>
+    <ClCompile Include="Box.cpp">
+      <Filter>Geometry\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaLight.cpp">
+      <Filter>Light\AreaLight</Filter>
+    </ClCompile>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Geometry\Triangle</Filter>
+    </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RayTracer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Plane.h">
+      <Filter>Geometry\Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape.h">
+      <Filter>Geometry\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Sphere.h">
+      <Filter>Geometry\Sphere</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>Light\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="PointLight.h">
+      <Filter>Light\PointLight</Filter>
+    </ClInclude>
+    <ClInclude Include="Quad.h">
+      <Filter>Geometry\Quad</Filter>
+    </ClInclude>
+    <ClInclude Include="Box.h">
+      <Filter>Geometry\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaLight.h">
+      <Filter>Light\AreaLight</Filter>
+    </ClInclude>
+    <ClInclude Include="Triangle.h">
+      <Filter>Geometry\Triangle</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+</Project>
