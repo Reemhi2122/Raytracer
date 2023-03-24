@@ -12,6 +12,40 @@ SceneManager::SceneManager()
 	//Scene 1
 	Scene(
 		9, new Shape * [9] {
+			new Quad(Vec3(0, 1, 0), Point3(1.5f, -4, 12), Material(new Color[2]{Color(0, 0, 0), Color(1, 1, 1)}, true, 0, 0, false, true, true), XYSize(20.f, 60.f)),
+			new Sphere(Point3(0.f, -2.f, 20.f), 2.f, Material(new Color(1.f, 1.f, 1.f), false, 0.5f, 0.f, true, true, true)),
+			new Sphere(Point3(4.f, -2.f, 20.f), 2.f, Material(new Color(1.f, 1.f, 1.f), false, 0.5f, 0.f, true, true, true)),
+			new Sphere(Point3(-4.f, -2.f, 20.f), 2.f, Material(new Color(1.f, 1.f, 1.f), false, 0.5f, 0.f, true, true, true)),
+			new Sphere(Point3(0.f, -2.f, 16.f), 2.f, Material(new Color(1.f, 1.f, 1.f), false, 0.5f, 0.f, true, true, true)),
+			new Sphere(Point3(4.f, -2.f, 16.f), 2.f, Material(new Color(1.f, 1.f, 1.f), false, 0.5f, 0.f, true, true, true)),
+			new Sphere(Point3(-4.f, -2.f, 16.f), 2.f, Material(new Color(1.f, 1.f, 1.f), false, 0.5f, 0.f, true, true, true)),
+			new Sphere(Point3(2.f, 1.f, 18.f), 2.f, Material(new Color(1.f, 1.f, 1.f), false, 0.5f, 0.f, true, true, true)),
+			new Sphere(Point3(-2.f, 1.f, 18.f), 2.f, Material(new Color(1.f, 1.f, 1.f), false, 0.5f, 0.f, true, true, true)),
+		},
+		1, new Light * [1]{
+			new PointLight(Point3(-4.f, 70.f, -40.f), 50000)
+		},
+		Color(0.03f, 0.64f, 0.81f)
+	),
+	//Scene(
+	//	8, new Shape * [8] {
+	//		new Quad(Vec3(-1.f, 0.f, 0.f), Point3(4.f, 0.f, 10.f), Material(new Color(0.f, 1.f, 0.f), false, 0, 0, false, true, true), XYSize(4,4)),
+	//		new Quad(Vec3(1.f, 0.f, 0.f), Point3(-4.f, 0.f, 10.f), Material(new Color(1.f, 0.f, 0.f), false, 0, 0, false, true, true), XYSize(4,4)),
+	//		new Quad(Vec3(0.f, 0.f, -1.f), Point3(0.f, 0.f, 12.f), Material(new Color(1.f, 1.f, 1.f), false, 0, 0, false, true, true), XYSize(4,4)),
+	//		new Quad(Vec3(0.f, -1.f, 0.f), Point3(0.f, 4.f, 10.f), Material(new Color(1.f, 1.f, 1.f), false, 0, 0, false, true, true), XYSize(4,4)),
+	//		new Quad(Vec3(0.f, 1.f, 0.f), Point3(0.f, -4.f, 10.f), Material(new Color(1.f, 1.f, 1.f), false, 0, 0, false, true, true), XYSize(4,4)),
+	//		new Sphere(Point3(2.f, -3.f, 9.f), 1.0f, Material(new Color(0.0f, 0.0f, 0.3f), false, 0.4f, 0, true, true, true)),
+	//		new Sphere(Point3(-1.5f, -3.f, 7.f), 1.0f, Material(new Color(0.8f, 0.8f, 0.8f), false, 0, 1.55f, true, true, false)),
+	//		LightShapes[1]
+	//	},
+	//	1, new Light * [1]{
+	//		new AreaLight(Point3(0.f, 3.25f, 9.f), LightShapes[1], 5, 50)
+	//	},
+	//	Color(0.1f, 0.1f, 0.6f)
+	//),
+
+	Scene(
+		9, new Shape * [9] {
 			new Quad(Vec3(-1.f, 0.f, 0.f), Point3(4.f, 0.f, 10.f), Material(new Color(0.f, 1.f, 0.f), false, 0, 0, false, true, true), XYSize(4,4)),
 			new Quad(Vec3(1.f, 0.f, 0.f), Point3(-4.f, 0.f, 10.f), Material(new Color(1.f, 0.f, 0.f), false, 0, 0, false, true, true), XYSize(4,4)),
 			new Quad(Vec3(0.f, 0.f, -1.f), Point3(0.f, 0.f, 12.f), Material(new Color(1.f, 1.f, 1.f), false, 0, 0, false, true, true), XYSize(4,4)),
@@ -104,7 +138,6 @@ SceneManager::SceneManager()
 		},
 		Color(0,0,0)
 	),
-	Scene(0, NULL, 0, NULL, Color()),
 	Scene(0, NULL, 0, NULL, Color()),
 	Scene(0, NULL, 0, NULL, Color())
 	};

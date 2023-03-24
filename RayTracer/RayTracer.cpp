@@ -53,8 +53,8 @@ void RayTracer::CreateTexture(SDL_Renderer* a_Renderer, std::clock_t a_Clock, in
 		}
 	}
 
-	const int amountOfThreadsx = 4;
-	const int amountOfThreadsy = 4;
+	const int amountOfThreadsx = 6;
+	const int amountOfThreadsy = 6;
 
 	std::thread renderThreads[amountOfThreadsx * amountOfThreadsy];
 
@@ -214,21 +214,22 @@ float RayTracer::LightAttenuation(Vec3 a_RayDir)
 
 Color RayTracer::PhongShading(Ray& a_Ray, Color a_Color, int a_index)
 {
+	if (!m_CurScene.GetShape(a_index)->GetMaterial().GetIsSpecular())
+		return a_Color;
+
 	Point3 LightOrigin = m_CurScene.GetLight(0)->GetPoint();
 	Point3 intersectionPoint = a_Ray.PositionAt(a_Ray.m_Length);
 	Vec3 normalDir = LightOrigin - intersectionPoint;
 
 	normalDir.Normalize();
 
-	if (m_CurScene.GetShape(a_index)->GetMaterial().GetIsSpecular()) {
-		Ray reflectiveray = GetReflectionRay(a_Ray, a_index);
-		float sharpness = 80;
-		float specular = pow(clamp(dot(reflectiveray.m_Direction, normalDir), 0, 1), sharpness);
-		return Vec3(
-			clamp(specular + a_Color.x, 0, 1),
-			clamp(specular + a_Color.y, 0, 1),
-			clamp(specular + a_Color.z, 0, 1));
-	}
+	Ray reflectiveray = GetReflectionRay(a_Ray, a_index);
+	float sharpness = 80;
+	float specular = pow(clamp(dot(reflectiveray.m_Direction, normalDir), 0, 1), sharpness);
+	return Vec3(
+		clamp(specular + a_Color.x, 0, 1),
+		clamp(specular + a_Color.y, 0, 1),
+		clamp(specular + a_Color.z, 0, 1));
 
 	return a_Color;
 }

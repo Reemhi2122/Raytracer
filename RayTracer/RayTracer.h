@@ -69,7 +69,7 @@ private:
 	int m_XBlockLength;
 	int m_YBlockLength;
 
-	const int xThread = 4;
-	const int yThread = 4;
+	const int xThread = 6;
+	const int yThread = 6;
 	int m_Frames;
 };
